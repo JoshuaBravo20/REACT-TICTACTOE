@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(85, 12, 128);
+  background-color: linear-gradient(
+    188deg,
+    rgba(85, 12, 128, 1) 0%,
+    rgba(149, 65, 194, 1) 100%
+  );
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.status {
+  margin-bottom: 20px;
+  margin-left: 60px;
+  font-size: 30px;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.square {
+  background-color: rgb(116, 76, 228);
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-right: -1px;
+  margin-top: -1px;
+  text-align: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 5px;
+  border: 2px solid white;
+  cursor: pointer;
+  margin: 2px;
+  color: rgb(255, 255, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.square:hover {
+  background-color: rgb(143, 120, 207);
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-right: -1px;
+  margin-top: -1px;
+  text-align: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 5px;
+  border: 2px solid white;
+  cursor: pointer;
+  margin: 2px;
+  color: rgb(255, 255, 255);
+}
+
+.square:focus {
+  outline: none;
+}
+
+
+button.squarehighlight {
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 24px;
+  height: 120px;
+  width: 120px;
+  margin-right: -1px;
+  margin-top: -1px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  background: rgb(133, 243, 7);
+  margin: 2px;
+  color: purple;
+}
+
+.mainCo {
+  justify-content: center;
+  margin-left: 400px;
+  margin-top: 65px !important;
+}
+
+.resetButton {
+  margin-left: 130px;
+  margin-top: 30px;
 }
