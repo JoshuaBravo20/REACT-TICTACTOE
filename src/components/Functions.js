@@ -17,12 +17,15 @@ export function CalculateWinner(tiles) {
             return {
                 winner: tiles[a],
                 line: lines[i],
-                isDraw: false
+                isDraw: false,
+                gameOver: true
             };
         }
     }
 
     let isDraw = true;
+
+
     for (let i = 0; i < tiles.length; i++) {
         if (tiles[i] === null) {
             isDraw = false;
@@ -32,6 +35,7 @@ export function CalculateWinner(tiles) {
     return {
         winner: null,
         line: null,
-        isDraw: isDraw
+        isDraw: isDraw,
+        gameOver: false
     };
 }
